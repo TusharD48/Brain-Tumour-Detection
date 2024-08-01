@@ -55,3 +55,22 @@ After training, we evaluated the performance of the model on a separate test set
 In summary, by augmenting the dataset and training a VGG16 model, we were able to develop a highly accurate brain tumor detection system. This system has the potential to aid healthcare professionals in diagnosing brain tumors more quickly and accurately, which can ultimately improve patient outcomes.
 
 Finally saved the model using pickle
+
+### About VGG16 Model
+
+The VGG16 model is a deep convolutional neural network that is widely used for image classification tasks. In the context of brain tumor detection, the VGG16 model can be trained to classify brain scans as either benign or malignant. Here is a brief description of how the VGG16 model works:
+
+Input: The model takes in a brain scan as input. The input is typically a 3D array of pixel values representing the image.
+
+Convolutional Layers: The input is passed through a series of convolutional layers, each of which extracts increasingly complex features from the input image. The convolutional layers use filters to scan the image and identify patterns and structures.
+
+Pooling Layers: After each convolutional layer, the model uses pooling layers to reduce the spatial dimensions of the features while retaining their important information. This reduces the number of parameters in the model and helps prevent overfitting.
+
+Flatten: Once the features have been extracted, the model flattens them into a 1D vector.
+
+Fully Connected Layers: The flattened features are then passed through a series of fully connected layers. These layers perform the final classification of the input image into one of the two categories (benign or malignant). The final layer uses a softmax activation function to produce a probability distribution over the two classes.
+
+Output: The output of the model is the probability of the input image belonging to each of the two classes. The class with the highest probability is the predicted class for the input image.
+
+To train the model, a dataset of brain scans with known labels (benign or malignant) is used. The VGG16 model is trained using backpropagation to adjust the weights of the model to minimize the error between the predicted and actual labels. Once the model is trained, it can be used to classify new brain scans as either benign or malignant.
+
